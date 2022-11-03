@@ -3,11 +3,10 @@
 namespace SkillUp\AbstractFactory\Factory;
 
 /**
- * Абстрактная фабрика, необходима для создания фабрик и выстраивания иерархии между фабричными классами
  * Class AbstractFactory
  * @package SkillUp\AbstractFactory\Factory
  */
-abstract class AbstractFactory
+interface AbstractFactoryInterface
 {
-    public abstract function create();
+    public function create();
 }
