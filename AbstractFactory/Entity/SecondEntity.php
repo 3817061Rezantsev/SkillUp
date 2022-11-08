@@ -3,7 +3,6 @@
 namespace SkillUp\AbstractFactory\Entity;
 
 /**
- * Моя третья сущность
  * Class SecondEntity
  * @package SkillUp\AbstractFactory\Entity
  */

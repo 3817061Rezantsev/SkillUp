@@ -3,8 +3,6 @@
 namespace SkillUp\AbstractFactory\Entity;
 
 /**
- * Сущность, которую я создал первой.
- * Да, я виду отсчет от нуля
  * Class FirstEntity
  * @package SkillUp\AbstractFactory\Entity
  */
