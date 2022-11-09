@@ -2,6 +2,8 @@
 
 namespace SkillUp\AbstractFactory\Entity;
 
+use SkillUp\Mediator\Mediator;
+
 /**
  * Базовая сущность
  * Class BaseEntity
@@ -12,11 +14,42 @@ class BaseEntity
     protected $value;
 
     /**
+     * @var array
+     */
+    protected $data;
+
+    /**
+     * @var Mediator
+     */
+    protected $mediator;
+
+    /**
      * @param $value
      */
     public function __construct($value)
     {
         $this->value = $value;
+    }
+
+    public function sendData($data)
+    {
+        $this->mediator->sendData($this, $data);
+    }
+
+    /**
+     * @return array
+     */
+    public function getData(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param array $data
+     */
+    public function setData(array $data)
+    {
+        $this->data = $data;
     }
 
     /**
