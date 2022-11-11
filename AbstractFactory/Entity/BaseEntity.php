@@ -60,8 +60,21 @@ class BaseEntity
         return $this->value;
     }
 
-    public function getClassName()
+    public function getClassName(): string
     {
         return 'SkillUp\AbstractFactory\Entity\BaseEntity';
+    }
+
+    public function prepareData(): array
+    {
+        sort($this->data);
+        return $this->data;
+    }
+
+    public function organizeData($data): array
+    {
+        $this->data[] = $data;
+        sort($this->data);
+        return $this->data;
     }
 }
